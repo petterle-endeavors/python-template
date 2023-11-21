@@ -40,13 +40,10 @@
 		},
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "npm install -g projen aws-cdk && curl -sSL https://install.python-poetry.org | python3 - && poetry shell",
-	// "postCreateCommand": "npm install -g projen aws-cdk && make install && projen && sudo sh get-docker.sh",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
