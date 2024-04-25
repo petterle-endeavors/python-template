@@ -1,6 +1,6 @@
 import pytest
 
-from python_template.example import hello
+from module_name.example import hello
 
 @pytest.mark.parametrize(
     ("name", "expected"),
