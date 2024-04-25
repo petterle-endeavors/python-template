@@ -18,7 +18,17 @@
     // saves your command history for use in the next session
     "source=projectname-bashhistory,target=/commandhistory,type=volume"
   ],
-  "runArgs": ["--network=host", "--cpus=8", "--memory=15g"],
+  "runArgs": [
+      "--network=host",
+      "--cpus=8",
+      "--memory=20g"
+  ],
+  "hostRequirements": {
+      "memory": "20gb",
+      "cpus": 8
+  },
+  // create and empty .ssh and .aws directories incase they don't exist to prevent failure of mounts
+  "initializeCommand": "mkdir -p ${localEnv:HOME}${localEnv:USERPROFILE}/.ssh && mkdir -p ${localEnv:HOME}${localEnv:USERPROFILE}/.aws",
   "updateContentCommand": "poetry update",
   "postCreateCommand": "projen",
   "features": {
