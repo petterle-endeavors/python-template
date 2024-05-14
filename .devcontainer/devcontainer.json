@@ -205,6 +205,10 @@
         "editor.formatOnSave": true,
         "editor.formatOnSaveMode": "file",
         "files.autoSaveDelay": 500,
+        "flake8.args": [
+          "--max-line-length=120",
+          "--ignore=E402,F841,F401,E302,E305"
+        ],
         "files.autoSave": "afterDelay"
       }
     }
