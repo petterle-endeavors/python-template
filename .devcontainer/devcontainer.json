@@ -8,6 +8,9 @@
       "USERNAME": "vscode"
     }
   },
+  "containerEnv": {
+    "AWS_PROFILE": "my-profile"
+  },
   // ensures we are NOT running as root
   "remoteUser": "vscode",
   "mounts": [
@@ -25,9 +28,6 @@
   // },
   "workspaceFolder": "${localWorkspaceFolder}",
   "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
-  "containerEnv": {
-    "AWS_PROFILE": "jennai-dev"
-  },
   "runArgs": ["--cpus=8", "--memory=15g"],
   "hostRequirements": {
     "memory": "15gb",
@@ -102,7 +102,8 @@
         "rvest.vs-code-prettier-eslint",
         "esbenp.prettier-vscode",
         "MatthewNespor.vscode-color-identifiers-mode",
-        "oderwat.indent-rainbow"
+        "oderwat.indent-rainbow",
+        "fabiospampinato.vscode-highlight"
       ],
       "settings": {
         "highlight.regexes": {
